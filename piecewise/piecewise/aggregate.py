@@ -241,7 +241,7 @@ class SpatialJoinBins(Bins):
 
     def build_query_to_populate(self, query, full_table, aggregate_table):
         insert_columns = [aggregate_table.c.join_key]
-        fk = Column(self.key, String)
+        fk = Column(self.key, Integer)
         geom = Column(self.geometry_column, Geometry())
         bins_table = Table(self.table, full_table.metadata, fk, geom)
 

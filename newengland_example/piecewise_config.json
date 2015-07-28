@@ -7,13 +7,25 @@
         "statistics_table_name": "county_statistics",
         "bins": [
             { "type" : "spatial_join", "table" : "newengland", "geometry_column" : "wkb_geometry", "key" : "geoid", "key_type" : "string" ,"join_custom_data" : true },
-            { "type" : "time_slices", "resolution" : "month" },
+            { "type" : "time_slices", "resolution" : "day" },
             { "type" : "isp_bins", "maxmind_table" : "maxmind", 
                 "rewrites" : {
                     "twc": ["Time Warner"],
                     "centurylink": ["Qwest", "Embarq", "Centurylink", "Centurytel"],
                     "level3": ["Level 3 Communications", "GBLX"],
-                    "cablevision": ["Cablevision Systems", "CSC Holdings", "Cablevision Infrastructure", "Cablevision Corporate", "Optimum Online", "Optimum WiFi", "Optimum Network"]
+                    "cablevision": ["Cablevision Systems", "CSC Holdings", "Cablevision Infrastructure", "Cablevision Corporate", "Optimum Online", "Optimum WiFi", "Optimum Network"],
+		    "rcn" : ["RCN", "IRCN Ltd"],
+		    "charter" : ["Charter Communications"],
+		    "meganet" : ["JSC Meganet", "megaNET network", "Meganet-2003 LLC", "Meganet Communications", "MegaNet"],
+		    "verizon" : ["Verizon Data Services LLC", "MCI Communications Services, Inc. d/b/a Verizon Business", "Verizon Nederland B.V.", "Verizon UK Limited", "Verizon Online LLC", "Cellco Partnership DBA Verizon Wireless", "Verizon Australia PTY Limited", "Verizon Business Network Services Inc."],
+		    "recol" : ["Recol"],
+		    "netplex" : ["NETPLEX"],
+		    "fullchannel":["Full Channel Inc."],
+		    "datanet":["DATANET LLC", "DataNetworks s.r.o.", "DATANET SYSTEMS SRL"],
+		    "powershift":["Power Shift Computer Services, Inc."],
+		    "greenmnt":["GREEN MOUNTAIN COFFEE ROASTERS, INC."],
+		    "pioneer":["Pioneer Internet","Pioneer Broadband","Pioneer Long Distance Inc.","LLC PioneerNet","Pioneer Cellular","Pioneer Hi-Bred International, Inc.","Pioneer Elabs Ltd.","Pioneer Balloon Co.","PIONEER STATE MUTUAL INSURANCE CO."],
+		    "wave":["WaveCom AS"]
                 } }
         ],
         "statistics": [
